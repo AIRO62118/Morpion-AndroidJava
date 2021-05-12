@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Jeu du morpion</string>
+    <string name="restart">Recommencer</string>
+</resources>
