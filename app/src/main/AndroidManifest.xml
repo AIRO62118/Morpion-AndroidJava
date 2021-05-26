@@ -22,4 +22,4 @@
         <activity android:name=".MorpionActivity"/>
 
 
-    </a st>
+    </application>
