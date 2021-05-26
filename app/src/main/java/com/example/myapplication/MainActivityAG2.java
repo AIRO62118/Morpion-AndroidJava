@@ -1,32 +1,32 @@
 package com.example.myapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivityAG extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivityAG2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_ag);
+        setContentView(R.layout.activity_main_ag2);
 
         init();
     }
     private void init() {
-        ecouteBtnMorpion();
+        ecouteBtnPuissance4();
         ecouteBtnfinish();
-        ecouteBtnVersPuissance4();
+        ecouteBtnVersMorpion();
     }
 
-    private void ecouteBtnMorpion() {
+    private void ecouteBtnPuissance4() {
         findViewById(R.id.boutonPuissance4).setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivityAG.this, SplashActivity2.class);
+                Intent intent = new Intent(MainActivityAG2.this, SplashActivity2.class);
                 startActivity(intent);
 
             }
@@ -42,14 +42,13 @@ public class MainActivityAG extends AppCompatActivity {
         });
     }
 
-    private void ecouteBtnVersPuissance4() {
-        findViewById(R.id.boutonJeuSuivant).setOnClickListener(new Button.OnClickListener() {
+    private void ecouteBtnVersMorpion() {
+        findViewById(R.id.boutonJeuPrecedent).setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivityAG.this, MainActivityAG2.class);
+                Intent intent = new Intent(MainActivityAG2.this, MainActivityAG.class);
                 finish();
                 startActivity(intent);
-
 
             }
         });

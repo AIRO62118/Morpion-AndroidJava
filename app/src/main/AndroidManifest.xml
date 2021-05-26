@@ -19,7 +19,10 @@
         </activity>
 
         <activity android:name=".MainActivityAG" />
+        <activity android:name=".SplashActivity2"/>
         <activity android:name=".MorpionActivity"/>
-
+        <activity android:name=".MainActivityAG2"/>
 
     </application>
+
+</manifest>

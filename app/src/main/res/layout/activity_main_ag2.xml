@@ -39,21 +39,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:rotation="90"
-            android:text="ff" />
+            android:text="@string/premierJeu" />
 
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@mipmap/morpionjeu" />
+            app:srcCompat="@mipmap/puissance4" />
 
         <Button
             android:id="@+id/boutonJeuSuivant"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:rotation="-90"
-            android:text="@string/deuxiemeJeu" />
+            android:text="prochain jeu" />
 
     </LinearLayout>
 
@@ -70,7 +70,7 @@
             android:layout_width="198dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/premierJeu" />
+            android:text="@string/deuxiemeJeu" />
 
         <Button
             android:id="@+id/boutonQuitter"

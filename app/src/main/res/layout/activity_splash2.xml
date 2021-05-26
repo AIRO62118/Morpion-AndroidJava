@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ic_launcher_background"
+    android:gravity="center"
     tools:context=".SplashActivity1">
 
     <ImageView
         android:id="@+id/morpionSplash"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="450dp"
+        android:layout_height="202dp"
         android:foregroundGravity="center"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        app:srcCompat="@mipmap/morpionjeu" />
 </LinearLayout>

@@ -10,6 +10,9 @@
     <string name="previous">Previous</string>
 
     <string name="premierJeu">Morpion</string>
+    <string name="deuxiemeJeu">Puissance 4</string>
+
+
     <string name="quitter">Quitter</string>
     <string name="explainMenuAG">Choisissez un mode de jeu parmi les jeux proposés !</string>
 
