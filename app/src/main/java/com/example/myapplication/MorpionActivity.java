@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MorpionActivity extends AppCompatActivity {
 
     //Attributs
     Button boutonRestart;
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_morpion);
         
         init();
         recommencerPartie();
@@ -63,16 +63,16 @@ public class MainActivity extends AppCompatActivity {
     private void fin() {
         if (jeu.testVictoire()){
             if (tour % 2 == 0){
-                Toast.makeText(MainActivity.this, "Victoire de X",Toast.LENGTH_SHORT).show();
+                Toast.makeText(MorpionActivity.this, "Victoire de X",Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(MainActivity.this, "Victoire de O",Toast.LENGTH_SHORT).show();
+                Toast.makeText(MorpionActivity.this, "Victoire de O",Toast.LENGTH_SHORT).show();
             }
             for (Button btnRestant: casesMorpion) {
                 btnRestant.setEnabled(false);
             }
 
         } else if (tour >=8){
-            Toast.makeText(MainActivity.this, "Egalité",Toast.LENGTH_SHORT).show();
+            Toast.makeText(MorpionActivity.this, "Egalité",Toast.LENGTH_SHORT).show();
         }
     }
     private void recommencer() {

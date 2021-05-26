@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MultiGames</string>
+    <string name="app_name">AndroidGames</string>
     <string name="restart">Recommencer</string>
     <string name="todo">TODO</string>
     <string name="title_activity_main2">MainActivity</string>
@@ -11,5 +11,6 @@
 
     <string name="premierJeu">Morpion</string>
     <string name="quitter">Quitter</string>
+    <string name="explainMenuAG">Choisissez un mode de jeu parmi les jeux proposés !</string>
 
 </resources>
