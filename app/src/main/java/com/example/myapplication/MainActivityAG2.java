@@ -26,7 +26,7 @@ public class MainActivityAG2 extends AppCompatActivity {
         findViewById(R.id.boutonPuissance4).setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivityAG2.this, SplashActivity2.class);
+                Intent intent = new Intent(MainActivityAG2.this, SplashActivity3.class);
                 startActivity(intent);
 
             }

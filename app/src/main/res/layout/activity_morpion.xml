@@ -105,6 +105,7 @@
         android:id="@+id/BoutonRestart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/restart" />
+        android:text="@string/restart"
+        android:visibility="invisible" />
 
 </LinearLayout>

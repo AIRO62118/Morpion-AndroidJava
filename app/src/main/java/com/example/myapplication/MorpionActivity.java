@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +15,7 @@ public class MorpionActivity extends AppCompatActivity {
     //Attributs
     Button boutonRestart;
     ArrayList<Button> casesMorpion;
-    Plateau jeu;
+    PlateauMorpion jeu;
     int tour;
 
     @Override
@@ -33,7 +34,7 @@ public class MorpionActivity extends AppCompatActivity {
 
         boutonRestart = findViewById(R.id.BoutonRestart);
         casesMorpion = new ArrayList<>();
-        jeu = new Plateau();
+        jeu = new PlateauMorpion();
         tour = 0;
 
         casesMorpion.add((Button) findViewById(R.id.Bouton00));
@@ -64,8 +65,10 @@ public class MorpionActivity extends AppCompatActivity {
         if (jeu.testVictoire()){
             if (tour % 2 == 0){
                 Toast.makeText(MorpionActivity.this, "Victoire de X",Toast.LENGTH_SHORT).show();
+                boutonRestart.setVisibility(View.VISIBLE);
             } else {
                 Toast.makeText(MorpionActivity.this, "Victoire de O",Toast.LENGTH_SHORT).show();
+                boutonRestart.setVisibility(View.VISIBLE);
             }
             for (Button btnRestant: casesMorpion) {
                 btnRestant.setEnabled(false);
@@ -73,7 +76,9 @@ public class MorpionActivity extends AppCompatActivity {
 
         } else if (tour >=8){
             Toast.makeText(MorpionActivity.this, "Egalité",Toast.LENGTH_SHORT).show();
+            boutonRestart.setVisibility(View.VISIBLE);
         }
+
     }
     private void recommencer() {
         jeu.restart();
@@ -81,6 +86,7 @@ public class MorpionActivity extends AppCompatActivity {
             btn.setEnabled(true);
             btn.setText("");
         }
+        boutonRestart.setVisibility(View.INVISIBLE);
         tour = 0;
     }
 
@@ -91,7 +97,10 @@ public class MorpionActivity extends AppCompatActivity {
                 recommencer();
             }
         });
+
+
     }
+
     private void cochercase(Button btn){
 
         String symbole;
@@ -99,8 +108,10 @@ public class MorpionActivity extends AppCompatActivity {
 
         if (tour % 2 == 0){
             symbole = "X";
+            btn.setTextColor(Color.BLUE);
         }  else{
             symbole = "O";
+            btn.setTextColor(Color.RED);
         }
 
         btn.setText(symbole);

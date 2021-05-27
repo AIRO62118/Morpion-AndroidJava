@@ -1,12 +1,12 @@
 package com.example.myapplication;
 
-public class Plateau {
+public class PlateauMorpion {
 
     //Attributs
     private String[] grille;
     
     //Constructeur
-    public Plateau() {
+    public PlateauMorpion() {
         this.grille = new String[9]; }
 
     //Getter / Setter
@@ -29,6 +29,7 @@ public class Plateau {
     public void restart(){
         this.grille = new String[9];
     }
+
     public boolean testLigne(){
 
         for (int indexLigne = 0; indexLigne < 3; indexLigne++) {
@@ -47,40 +48,9 @@ public class Plateau {
 
         return grille[4] != null && (grille[0] == grille[4] && grille[4] == grille[8] || grille[2] == grille[4] && grille[4] == grille[6]);
     }
+
     public boolean testVictoire(){
         return testColonne() || testLigne() || testDiagonale();
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
