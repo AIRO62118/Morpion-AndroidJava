@@ -16,4 +16,6 @@
     <string name="quitter">Quitter</string>
     <string name="explainMenuAG">Choisissez un mode de jeu parmi les jeux proposés !</string>
 
+    <string name="rotatePhone">Pour continuer, mettez votre téléphone en mode paysage.</string>
+
 </resources>
